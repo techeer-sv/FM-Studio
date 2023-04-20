@@ -33,6 +33,13 @@ services:
     networks:
       - fmstudio
 
+  frontend:
+    container_name: "frontend"
+    build:
+      context: ./frontend
+    ports:
+      - "3000:3000"
+
 networks:
   fmstudio:
     driver: bridge
